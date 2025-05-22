@@ -1,137 +1,130 @@
 .inner-container {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-    max-width: 90%;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .map {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: calc(100% - 600px);
-  }
-  
-  .history {
-    width: 600px;
-  }
-  
-  search {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    height: 40px;
-    width: 100%;
-  }
-  .map__search {
-    width: 80%;
-    height: calc(100% - 10px);
-    font-size: 1.2rem;
-    padding: 5px 10px;
-    border: 2px solid #000;
-    border-radius: 5px;
-  }
-  
-  .btn {
-    box-sizing: border-box;
-    padding: 5px 0;
-    width: 20%;
-    height: 100%;
-    font-weight: 500;
-    font-size: 1.2rem;
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px;
-    border: 2px solid #000;
-    cursor: pointer;
-    transition:
-      color 0.3s ease-in-out,
-      background-color 0.3s ease-in-out;
-  }
-  
-  .map__block {
-    display: flex;
-    align-items: stretch;
-  }
-  
-  .map__empty {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    background-color: gray;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: calc(100% - 600px);
+}
+
+.history {
+  width: 600px;
+}
+
+search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 40px;
+  width: 100%;
+}
+.map__search {
+  width: 80%;
+  height: calc(100% - 10px);
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.btn {
+  box-sizing: border-box;
+  padding: 5px 0;
+  width: 20%;
+  height: 100%;
+  font-weight: 500;
+  font-size: 1.2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition:
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.map__block {
+  display: flex;
+  align-items: stretch;
+}
+
+.map__empty {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: gray;
+}
+
+.map__empty img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map__info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 2rem;
+}
+
+.map__info-temp {
+  font-weight: 700;
+}
+
+.history {
+  border-left: 1px solid gray;
+}
+
+.history__title {
+  padding-left: 15px;
+  font-size: 2rem;
+  border-bottom: 1px solid gray;
+}
+
+.history__list {
+  margin: 0;
+  padding: 0;
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.25rem;
+  list-style-type: decimal;
+}
+
+.history__list a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease-in-out;
+}
+
+.history__list li {
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    background-color: #fff;
+    color: #000;
+    /* border-color: #fff; */
   }
 
-  .map__empty img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .history__list a:hover {
+    color: gray;
+    text-decoration: underline;
   }
-  
-  .map__info {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 2rem;
-  }
-  
-  .map__info-temp {
-    font-weight: 700;
-  }
-  
-  .map__empty::after {
-    content: "Map";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: white;
-  }
-  
-  .history {
-    border-left: 1px solid gray;
-  }
-  
-  .history__title {
-    padding-left: 15px;
-    font-size: 2rem;
-    border-bottom: 1px solid gray;
-  }
-  
-  .history__list {
-    margin: 0;
-    padding: 0;
-    padding-left: 35px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 1.25rem;
-    list-style-type: decimal;
-  }
-  
-  .history__list a {
-    text-decoration: none;
-    color: #000;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  @media (hover: hover) {
-    .btn:hover {
-      background-color: #fff;
-      color: #000;
-      /* border-color: #fff; */
-    }
-  
-    .history__list a:hover {
-      color: gray;
-      text-decoration: underline;
-    }
-  }
-  
+}

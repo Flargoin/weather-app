@@ -5,4 +5,4 @@ export const API_KEY_YANDEX_STATIC = '241949d6-6211-47e4-8a7f-9cd76a11382c';
 export const API_KEY_OWM = '172881dbf8e61db5727d4fc9bea1de51';
 
 // API KEY YANDEX GEOCODER
-// export const API_KEY_YANDEX_GEOCODER = '89e539e3-fb91-4ba5-8e75-029bc88a5a0d';
+export const API_KEY_YANDEX_GEOCODER = '89e539e3-fb91-4ba5-8e75-029bc88a5a0d';
