@@ -4,8 +4,54 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "webpack serve --node-env=development",
+    "dev": "webpack --node-env=development",
+    "build": "webpack --node-env=production",
+    "test": "jest --coverage --collectCoverageFrom=src/**/*.{js,jsx}",
+    "lint": "eslint src",
+    "clear": "rd /s /q dist",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint"
+    ],
+    "*.{test.js,spec.js}": [
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "author": "Sergey Romanov <k4rik4tur4@yandex.ru>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.27.1",
+    "@eslint/js": "^9.26.0",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.26.0",
+    "eslint-plugin-jest": "^28.11.0",
+    "globals": "^16.0.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^15.5.1",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.3",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.1.6",
+    "prettier": "3.5.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  }
 }
